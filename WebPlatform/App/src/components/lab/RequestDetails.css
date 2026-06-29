@@ -1,0 +1,393 @@
+/* Request Details Page Styles */
+
+.lab-request-details {
+  padding: 24px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.lab-details-header {
+  margin-bottom: 24px;
+}
+
+.lab-back-button {
+  background: none;
+  border: none;
+  color: #0066cc;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 8px 0;
+  margin-bottom: 16px;
+  transition: color 0.2s;
+}
+
+.lab-back-button:hover {
+  color: #0052a3;
+  text-decoration: underline;
+}
+
+.lab-back-button:focus {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+}
+
+.lab-details-header h1 {
+  font-size: 28px;
+  color: #333;
+  margin: 0;
+}
+
+.lab-details-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.lab-details-section {
+  padding: 24px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.lab-details-section:last-of-type {
+  border-bottom: none;
+}
+
+.lab-details-section h2 {
+  font-size: 18px;
+  color: #333;
+  margin: 0 0 16px 0;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #0066cc;
+}
+
+.lab-status-section {
+  background: linear-gradient(135deg, #f0f7ff 0%, #e6f2ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lab-status-info h3 {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.lab-status-info .lab-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.lab-request-time {
+  font-size: 12px;
+  color: #999;
+  margin: 0;
+}
+
+.lab-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.lab-info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.lab-info-item.lab-full-width {
+  grid-column: 1 / -1;
+}
+
+.lab-info-item label {
+  font-size: 12px;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.lab-info-item p {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.lab-notes-box {
+  background: #f9f9f9;
+  padding: 16px;
+  border-left: 4px solid #0066cc;
+  border-radius: 4px;
+}
+
+.lab-notes-box p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.lab-details-actions {
+  padding: 24px;
+  background: #f9f9f9;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Button Styles */
+.lab-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lab-btn:focus {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+}
+
+.lab-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.lab-btn-primary {
+  background-color: #0066cc;
+  color: white;
+}
+
+.lab-btn-primary:hover:not(:disabled) {
+  background-color: #0052a3;
+}
+
+.lab-btn-secondary {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.lab-btn-secondary:hover:not(:disabled) {
+  background-color: #d0d0d0;
+}
+
+.lab-btn-danger {
+  background-color: #cc0000;
+  color: white;
+}
+
+.lab-btn-danger:hover:not(:disabled) {
+  background-color: #990000;
+}
+
+/* Modal Styles */
+.lab-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.lab-modal {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.lab-modal-header {
+  padding: 24px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lab-modal-header h2 {
+  font-size: 20px;
+  color: #333;
+  margin: 0;
+}
+
+.lab-modal-close {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #999;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.lab-modal-close:hover {
+  color: #333;
+}
+
+.lab-modal-close:focus {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+}
+
+.lab-modal-body {
+  padding: 24px;
+}
+
+.lab-modal-body p {
+  font-size: 14px;
+  color: #555;
+  margin: 0 0 16px 0;
+}
+
+.lab-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 14px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.lab-textarea:focus {
+  outline: none;
+  border-color: #0066cc;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.lab-modal-footer {
+  padding: 24px;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+/* Badge Styles */
+.lab-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.lab-badge-primary {
+  background-color: #e6f2ff;
+  color: #0066cc;
+}
+
+.lab-badge-success {
+  background-color: #e6f9f0;
+  color: #00aa44;
+}
+
+.lab-badge-warning {
+  background-color: #fff3e6;
+  color: #ff9900;
+}
+
+.lab-badge-danger {
+  background-color: #ffe6e6;
+  color: #cc0000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .lab-request-details {
+    padding: 16px;
+  }
+
+  .lab-details-section {
+    padding: 16px;
+  }
+
+  .lab-details-header h1 {
+    font-size: 24px;
+  }
+
+  .lab-info-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .lab-details-actions {
+    flex-direction: column;
+    justify-content: stretch;
+  }
+
+  .lab-btn {
+    width: 100%;
+  }
+
+  .lab-modal {
+    width: 95%;
+  }
+
+  .lab-modal-footer {
+    flex-direction: column;
+  }
+
+  .lab-modal-footer .lab-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .lab-request-details {
+    padding: 12px;
+  }
+
+  .lab-details-section {
+    padding: 12px;
+  }
+
+  .lab-details-header h1 {
+    font-size: 20px;
+  }
+
+  .lab-details-section h2 {
+    font-size: 16px;
+  }
+
+  .lab-info-item label {
+    font-size: 11px;
+  }
+
+  .lab-info-item p {
+    font-size: 14px;
+  }
+}

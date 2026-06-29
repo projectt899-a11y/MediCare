@@ -1,0 +1,606 @@
+/**
+ * Lab Home Component Styles
+ * Includes summary cards, recent requests table, and notifications section
+ */
+
+.lab-home {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  min-height: 100%;
+}
+
+/* Home Header */
+.lab-home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3px;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.lab-home-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--lab-text);
+  font-weight: 700;
+}
+
+.lab-home-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lab-btn-secondary {
+  background-color: white;
+  color: var(--lab-primary);
+  border: 2px solid var(--lab-primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+}
+
+.lab-btn-secondary:hover:not(:disabled) {
+  background-color: var(--lab-primary);
+  color: white;
+}
+
+.lab-btn-secondary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.lab-icon {
+  display: inline-block;
+  font-size: 1.2rem;
+}
+
+.lab-spinner {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgba(0, 102, 204, 0.3);
+  border-top-color: var(--lab-primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.lab-loading-indicator {
+  font-size: 0.9rem;
+  color: var(--lab-text-light);
+  font-style: italic;
+}
+
+/* Home Section */
+.lab-home-section {
+  margin-bottom: 5px;
+}
+
+.lab-home-section-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--lab-text);
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--lab-primary);
+}
+
+/* Stat Cards */
+.lab-home-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.lab-home-stat-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.lab-home-stat-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.lab-home-stat-icon-primary {
+  background-color: rgba(0, 102, 204, 0.1);
+  border-left-color: var(--lab-primary);
+}
+
+.lab-home-stat-icon-warning {
+  background-color: rgba(255, 153, 0, 0.1);
+  border-left-color: var(--lab-warning);
+}
+
+.lab-home-stat-icon-info {
+  background-color: rgba(0, 102, 204, 0.1);
+  border-left-color: var(--lab-primary);
+}
+
+.lab-home-stat-icon-success {
+  background-color: rgba(0, 170, 68, 0.1);
+  border-left-color: var(--lab-success);
+}
+
+.lab-home-stat-card .lab-home-card-body {
+  flex: 1;
+}
+
+.lab-home-stat-card .lab-home-card-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.95rem;
+  color: var(--lab-text-light);
+  font-weight: 500;
+}
+
+.lab-home-stat-value {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--lab-primary);
+}
+
+.lab-home-stat-value-warning {
+  color: var(--lab-warning);
+}
+
+.lab-home-stat-value-info {
+  color: var(--lab-primary);
+}
+
+.lab-home-stat-value-success {
+  color: var(--lab-success);
+}
+
+/* Home Grid Layout */
+.lab-home-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.lab-home-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/* Home Card */
+.lab-home-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.lab-home-card-body {
+  padding: 1rem;
+}
+
+.lab-home-card-title {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--lab-text-light);
+  font-weight: 500;
+}
+
+/* Empty State */
+.lab-home-empty-state {
+  padding: 2rem;
+  text-align: center;
+  color: var(--lab-text-light);
+  font-style: italic;
+}
+
+/* Notifications List */
+.lab-home-notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.lab-home-notification-item {
+  padding: 1rem;
+  border-bottom: 1px solid var(--lab-border);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.lab-home-notification-item:last-child {
+  border-bottom: none;
+}
+
+.lab-home-notification-item:hover {
+  background-color: rgba(0, 102, 204, 0.02);
+}
+
+.lab-home-notification-item.lab-home-notification-urgent {
+  background-color: rgba(204, 0, 0, 0.05);
+  border-left: 4px solid var(--lab-danger);
+  padding-left: calc(1rem - 4px);
+}
+
+.lab-home-notification-item.lab-home-notification-urgent:hover {
+  background-color: rgba(204, 0, 0, 0.1);
+}
+
+.lab-home-notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+  gap: 1rem;
+}
+
+.lab-home-notification-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: var(--lab-text);
+}
+
+.lab-home-urgent-badge {
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.lab-home-notification-patient {
+  font-size: 0.95rem;
+}
+
+.lab-home-notification-time {
+  font-size: 0.8rem;
+  color: var(--lab-text-light);
+  white-space: nowrap;
+}
+
+.lab-home-notification-body {
+  margin: 0;
+}
+
+.lab-home-notification-test {
+  margin: 0.25rem 0 0 0;
+  font-size: 0.9rem;
+  color: var(--lab-text);
+  font-weight: 500;
+}
+
+.lab-home-notification-status {
+  margin: 0.25rem 0 0 0;
+  font-size: 0.85rem;
+  color: var(--lab-text-light);
+}
+
+/* Recent Requests Table */
+.lab-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.lab-table th {
+  background-color: var(--lab-neutral);
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--lab-text);
+  border-bottom: 2px solid var(--lab-border);
+  font-size: 0.95rem;
+}
+
+.lab-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--lab-border);
+  color: var(--lab-text);
+}
+
+.lab-table tbody tr:hover {
+  background-color: rgba(0, 102, 204, 0.02);
+}
+
+.lab-btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  background-color: var(--lab-primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 36px;
+}
+
+.lab-btn-sm:hover {
+  background-color: #0052a3;
+  box-shadow: 0 2px 6px rgba(0, 102, 204, 0.3);
+}
+
+.lab-btn-sm:active {
+  transform: scale(0.98);
+}
+
+/* Empty State */
+.lab-empty-state {
+  padding: 2rem;
+  text-align: center;
+  color: var(--lab-text-light);
+  font-style: italic;
+}
+
+/* Notifications List */
+.lab-notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.lab-notification-item {
+  padding: 1rem;
+  border-bottom: 1px solid var(--lab-border);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.lab-notification-item:last-child {
+  border-bottom: none;
+}
+
+.lab-notification-item:hover {
+  background-color: rgba(0, 102, 204, 0.02);
+}
+
+.lab-notification-item.lab-notification-urgent {
+  background-color: rgba(204, 0, 0, 0.05);
+  border-left: 4px solid var(--lab-danger);
+  padding-left: calc(1rem - 4px);
+}
+
+.lab-notification-item.lab-notification-urgent:hover {
+  background-color: rgba(204, 0, 0, 0.1);
+}
+
+.lab-notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+  gap: 1rem;
+}
+
+.lab-notification-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: var(--lab-text);
+}
+
+.lab-urgent-badge {
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.lab-notification-patient {
+  font-size: 0.95rem;
+}
+
+.lab-notification-time {
+  font-size: 0.8rem;
+  color: var(--lab-text-light);
+  white-space: nowrap;
+}
+
+.lab-notification-body {
+  margin: 0;
+}
+
+.lab-notification-test {
+  margin: 0.25rem 0 0 0;
+  font-size: 0.9rem;
+  color: var(--lab-text);
+  font-weight: 500;
+}
+
+.lab-notification-status {
+  margin: 0.25rem 0 0 0;
+  font-size: 0.85rem;
+  color: var(--lab-text-light);
+}
+
+/* Badge Styles */
+.lab-badge {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.lab-badge-primary {
+  background-color: #cfe2ff;
+  color: #084298;
+}
+
+.lab-badge-success {
+  background-color: #d1e7dd;
+  color: #0f5132;
+}
+
+.lab-badge-warning {
+  background-color: #fff3cd;
+  color: #664d03;
+}
+
+.lab-badge-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Responsive Design */
+@media (max-width: 1023px) {
+  .lab-home {
+    padding: 1.5rem;
+  }
+
+  .lab-home-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .lab-home-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .lab-home-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lab-home-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lab-home-stat-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .lab-home-stat-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .lab-home-stat-value {
+    font-size: 2rem;
+  }
+
+  .lab-table th,
+  .lab-table td {
+    padding: 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .lab-btn-sm {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+    min-height: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .lab-home {
+    padding: 1rem;
+  }
+
+  .lab-home-header h1 {
+    font-size: 1.25rem;
+  }
+
+  .lab-home-controls {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .lab-btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .lab-home-section-title {
+    font-size: 1.1rem;
+  }
+
+  .lab-home-grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .lab-home-stat-card {
+    padding: 1rem;
+  }
+
+  .lab-home-stat-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.25rem;
+  }
+
+  .lab-home-stat-value {
+    font-size: 1.75rem;
+  }
+
+  .lab-table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .lab-table th,
+  .lab-table td {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .lab-btn-sm {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.7rem;
+    min-height: 28px;
+  }
+
+  .lab-home-notification-header {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .lab-home-notification-time {
+    align-self: flex-start;
+  }
+
+  .lab-home-grid {
+    gap: 1.5rem;
+  }
+}
+
+/* Accessibility */
+.lab-btn-secondary:focus,
+.lab-btn-sm:focus {
+  outline: 2px solid var(--lab-primary);
+  outline-offset: 2px;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .lab-spinner,
+  .lab-stat-card,
+  .lab-btn-secondary,
+  .lab-btn-sm,
+  .lab-notification-item {
+    animation: none;
+    transition: none;
+  }
+}

@@ -1,0 +1,396 @@
+/* Processing Form Styles */
+
+.lab-processing-form {
+  padding: 24px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.lab-form-header {
+  margin-bottom: 24px;
+}
+
+.lab-form-header h1 {
+  font-size: 28px;
+  color: #333;
+  margin: 0;
+}
+
+.lab-form-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.lab-form-section {
+  padding: 24px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.lab-form-section:last-of-type {
+  border-bottom: none;
+}
+
+.lab-form-section h2 {
+  font-size: 18px;
+  color: #333;
+  margin: 0 0 16px 0;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #0066cc;
+}
+
+.lab-form-section h3 {
+  font-size: 16px;
+  color: #333;
+  margin: 0 0 12px 0;
+}
+
+/* Request Info */
+.lab-request-info {
+  background: #f9f9f9;
+  padding: 16px;
+  border-radius: 6px;
+  border-left: 4px solid #0066cc;
+}
+
+.lab-info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.lab-info-row:not(:last-child) {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.lab-info-label {
+  font-weight: 600;
+  color: #666;
+  min-width: 100px;
+}
+
+.lab-info-value {
+  color: #333;
+  text-align: right;
+}
+
+/* Submission Options */
+.lab-submission-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.lab-option-label {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.lab-option-label:hover {
+  border-color: #0066cc;
+  background-color: #f9f9f9;
+}
+
+.lab-option-label input[type='radio'] {
+  margin-right: 12px;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
+
+.lab-option-label input[type='radio']:checked + span {
+  color: #0066cc;
+  font-weight: 600;
+}
+
+/* File Upload */
+.lab-file-upload {
+  position: relative;
+}
+
+.lab-file-input {
+  display: none;
+}
+
+.lab-file-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  border: 2px dashed #0066cc;
+  border-radius: 8px;
+  background: #f9f9f9;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.lab-file-label:hover {
+  background: #f0f7ff;
+  border-color: #0052a3;
+}
+
+.lab-file-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.lab-file-text {
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.lab-file-hint {
+  font-size: 12px;
+  color: #999;
+}
+
+.lab-error-message {
+  color: #cc0000;
+  font-size: 14px;
+  margin-top: 12px;
+  padding: 12px;
+  background: #ffe6e6;
+  border-radius: 6px;
+  border-left: 4px solid #cc0000;
+}
+
+.lab-success-message {
+  color: #00aa44;
+  font-size: 14px;
+  margin-top: 12px;
+  padding: 12px;
+  background: #e6f9f0;
+  border-radius: 6px;
+  border-left: 4px solid #00aa44;
+}
+
+.lab-progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  margin-top: 12px;
+  overflow: hidden;
+}
+
+.lab-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #0066cc, #0052a3);
+  transition: width 0.2s;
+}
+
+/* Form Fields */
+.lab-form-fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.lab-form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.lab-form-field label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.lab-required {
+  color: #cc0000;
+  margin-left: 4px;
+}
+
+.lab-form-field input,
+.lab-form-field select {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.2s;
+  min-height: 44px;
+}
+
+.lab-form-field input:focus,
+.lab-form-field select:focus {
+  outline: none;
+  border-color: #0066cc;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.lab-form-field input::placeholder {
+  color: #999;
+}
+
+/* Textarea */
+.lab-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 14px;
+  resize: vertical;
+  box-sizing: border-box;
+  transition: all 0.2s;
+}
+
+.lab-textarea:focus {
+  outline: none;
+  border-color: #0066cc;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.lab-notes-hint {
+  font-size: 12px;
+  color: #999;
+  margin: 0 0 12px 0;
+  font-style: italic;
+}
+
+.lab-char-count {
+  font-size: 12px;
+  color: #999;
+  margin-top: 8px;
+  text-align: right;
+}
+
+/* Form Actions */
+.lab-form-actions {
+  padding: 24px;
+  background: #f9f9f9;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  border-top: 1px solid #e0e0e0;
+}
+
+.lab-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lab-btn:focus {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+}
+
+.lab-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.lab-btn-primary {
+  background-color: #0066cc;
+  color: white;
+}
+
+.lab-btn-primary:hover:not(:disabled) {
+  background-color: #0052a3;
+}
+
+.lab-btn-secondary {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.lab-btn-secondary:hover:not(:disabled) {
+  background-color: #d0d0d0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .lab-processing-form {
+    padding: 16px;
+  }
+
+  .lab-form-section {
+    padding: 16px;
+  }
+
+  .lab-form-header h1 {
+    font-size: 24px;
+  }
+
+  .lab-form-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .lab-file-label {
+    padding: 30px;
+  }
+
+  .lab-form-actions {
+    flex-direction: column;
+  }
+
+  .lab-btn {
+    width: 100%;
+  }
+
+  .lab-info-row {
+    flex-direction: column;
+  }
+
+  .lab-info-value {
+    text-align: left;
+    margin-top: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .lab-processing-form {
+    padding: 12px;
+  }
+
+  .lab-form-section {
+    padding: 12px;
+  }
+
+  .lab-form-header h1 {
+    font-size: 20px;
+  }
+
+  .lab-form-section h2 {
+    font-size: 16px;
+  }
+
+  .lab-form-section h3 {
+    font-size: 14px;
+  }
+
+  .lab-file-label {
+    padding: 20px;
+  }
+
+  .lab-file-icon {
+    font-size: 24px;
+  }
+
+  .lab-file-text {
+    font-size: 14px;
+  }
+}

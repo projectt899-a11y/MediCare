@@ -1,0 +1,85 @@
+.footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 60px 0 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-brand h2 {
+  color: #3498db;
+  margin-bottom: 15px;
+}
+
+.footer-links h3,
+.footer-professionals h3,
+.footer-contact h3 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.footer-links ul,
+.footer-professionals ul {
+  list-style: none;
+}
+
+.footer-links ul li,
+.footer-professionals ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links a,
+.footer-professionals a {
+  color: #bdc3c7;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-professionals a:hover {
+  color: #3498db;
+}
+
+.footer-contact p {
+  color: #bdc3c7;
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #34495e;
+  padding-top: 20px;
+  text-align: center;
+  color: #bdc3c7;
+}
+
+/* Add these styles for the new footer buttons */
+.footer-links button,
+.footer-professionals button {
+  background: none;
+  border: none;
+  color: #bdc3c7;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 0;
+  text-align: left;
+  transition: color 0.3s ease;
+  width: 100%;
+}
+
+.footer-links button:hover,
+.footer-professionals button:hover {
+  color: #3498db;
+  text-decoration: underline;
+}

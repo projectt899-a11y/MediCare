@@ -1,0 +1,113 @@
+:root {
+  /* Lab-specific color palette */
+  --lab-primary: #0066CC;
+  --lab-success: #00AA44;
+  --lab-warning: #FF9900;
+  --lab-danger: #CC0000;
+  --lab-neutral: #F5F5F5;
+  --lab-text: #333333;
+  --lab-text-light: #666666;
+  --lab-border: #DDDDDD;
+  
+  /* Sidebar colors */
+  --lab-sidebar-bg: #1a1d23;
+  --lab-sidebar-text: #adb5bd;
+  --lab-sidebar-text-hover: #ffffff;
+  --lab-sidebar-active-bg: #0056b3;
+  --lab-sidebar-active-text: #ffffff;
+  
+  /* Header colors */
+  --lab-header-bg: #ffffff;
+  --lab-header-border: #dee2e6;
+  
+  /* Spacing */
+  --sidebar-width-open: 260px;
+  --sidebar-width-closed: 70px;
+  --header-height: 70px;
+  
+  /* Shadows */
+  --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --shadow-md: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* --- Main Layout --- */
+.lab-layout {
+  display: flex;
+  height: 100vh;
+  background-color: var(--lab-neutral);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.lab-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-left: var(--sidebar-width-open);
+  transition: margin-left 0.3s ease;
+}
+
+.lab-sidebar.closed ~ .lab-main {
+  margin-left: var(--sidebar-width-closed);
+}
+
+.lab-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  background-color: var(--lab-neutral);
+}
+
+/* --- Sidebar State Control --- */
+.lab-sidebar {
+  width: var(--sidebar-width-open);
+}
+
+.lab-sidebar.open {
+  width: var(--sidebar-width-open);
+}
+
+.lab-sidebar.closed {
+  width: var(--sidebar-width-closed);
+}
+
+/* --- Responsive Design --- */
+
+/* Tablet (768px - 1023px) */
+@media (max-width: 1023px) {
+  .lab-content {
+    padding: 1.5rem;
+  }
+}
+
+/* Mobile (320px - 767px) */
+@media (max-width: 767px) {
+  .lab-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 1040;
+    transform: translateX(-100%);
+    width: var(--sidebar-width-open);
+  }
+
+  .lab-sidebar.open {
+    transform: translateX(0);
+  }
+
+  .lab-main {
+    margin-left: 0 !important;
+  }
+  
+  .lab-content {
+    padding: 1rem;
+  }
+}
+
+/* Extra small devices (320px - 480px) */
+@media (max-width: 480px) {
+  .lab-content {
+    padding: 0.75rem;
+  }
+}

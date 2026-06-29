@@ -1,0 +1,270 @@
+.Dappointments {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.Dappointment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.Dappointment-header h1 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.8rem;
+}
+
+.view-toggle {
+  display: flex;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #7f8c8d;
+}
+
+.toggle-button.active {
+  background-color: #3498db;
+  color: white;
+}
+
+.Dappointments-list-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.filter-options {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.filter-options select,
+.date-filter {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.Dappointments-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.Dappointments-table th {
+  text-align: left;
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+.Dappointments-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.status-badge.upcoming {
+  background-color: rgba(52, 152, 219, 0.1);
+  color: #3498db;
+}
+
+.status-badge.pending {
+  background-color: rgba(243, 156, 18, 0.1);
+  color: #f39c12;
+}
+
+.status-badge.confirmed {
+  background-color: rgba(39, 174, 96, 0.15);
+  color: #27ae60;
+}
+
+.status-badge.completed {
+  background-color: rgba(52, 152, 219, 0.1);
+  color: #3498db;
+}
+
+.status-badge.cancelled {
+  background-color: rgba(231, 76, 60, 0.15);
+  color: #e74c3c;
+}
+
+.status-select {
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: white;
+  transition: all 0.2s ease;
+}
+
+.status-select:hover {
+  border-color: #3498db;
+}
+
+.status-select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.status-select.status-pending {
+  background-color: rgba(243, 156, 18, 0.1);
+  color: #f39c12;
+  border-color: #f39c12;
+}
+
+.status-select.status-confirmed {
+  background-color: rgba(39, 174, 96, 0.15);
+  color: #27ae60;
+  border-color: #27ae60;
+}
+
+.status-select.status-completed {
+  background-color: rgba(21, 123, 240, 0.1);
+  color: #273bae;
+  border-color: #0f67eb;
+}
+
+.status-select.status-cancelled {
+  background-color: rgba(231, 76, 60, 0.15);
+  color: #e74c3c;
+  border-color: #e74c3c;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #27ae60;
+  padding: 6px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-btn:hover {
+  color: #e74c3c;
+  background-color: rgba(231, 76, 60, 0.1);
+}
+
+.delete-btn:active {
+  transform: scale(0.95);
+}
+
+.calendar-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.calendar-header h2 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.5rem;
+}
+
+.nav-button {
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+  color: #7f8c8d;
+}
+
+.nav-button:hover {
+  background-color: #f8f9fa;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.day-header {
+  text-align: center;
+  font-weight: 600;
+  color: #7f8c8d;
+  padding: 10px 0;
+}
+
+.calendar-day {
+  min-height: 80px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar-day.empty {
+  border: none;
+}
+
+.calendar-day.today {
+  background-color: rgba(52, 152, 219, 0.1);
+  border-color: #3498db;
+}
+
+.day-number {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.day-Dappointments {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.appointment-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #0099ff;
+  display: inline-block;
+  margin: 2px;
+}
+
+.more-Dappointments {
+  font-size: 0.8rem;
+  color: #7f8c8d;
+  margin-top: auto;
+}
+

@@ -1,0 +1,237 @@
+.bulk-diagnosis-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: white;
+  border: 2px solid #3498db;
+  border-radius: 4px;
+}
+
+/* Form Header */
+.bulk-diagnosis-form .form-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+}
+
+.bulk-diagnosis-form h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.bulk-diagnosis-form .selected-count {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Warning Message */
+.bulk-diagnosis-form .warning-message {
+  padding: 0.75rem;
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeaa7;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.bulk-diagnosis-form .warning-message p {
+  margin: 0;
+}
+
+/* Confirmation Dialog */
+.bulk-diagnosis-form .confirmation-dialog {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 4px;
+}
+
+.bulk-diagnosis-form .confirmation-dialog p {
+  margin: 0;
+  color: #856404;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.bulk-diagnosis-form .confirmation-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+.bulk-diagnosis-form .confirm-btn,
+.bulk-diagnosis-form .cancel-confirmation-btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bulk-diagnosis-form .confirm-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.bulk-diagnosis-form .confirm-btn:hover:not(:disabled) {
+  background-color: #c0392b;
+}
+
+.bulk-diagnosis-form .confirm-btn:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.bulk-diagnosis-form .cancel-confirmation-btn {
+  background-color: #95a5a6;
+  color: white;
+}
+
+.bulk-diagnosis-form .cancel-confirmation-btn:hover:not(:disabled) {
+  background-color: #7f8c8d;
+}
+
+.bulk-diagnosis-form .cancel-confirmation-btn:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+/* Form Group */
+.bulk-diagnosis-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.bulk-diagnosis-form label {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+/* Textarea */
+.bulk-diagnosis-form .diagnosis-textarea {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  resize: vertical;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bulk-diagnosis-form .diagnosis-textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.bulk-diagnosis-form .diagnosis-textarea:disabled {
+  background-color: #f5f5f5;
+  color: #999;
+  cursor: not-allowed;
+}
+
+/* Character Count */
+.bulk-diagnosis-form .char-count {
+  font-size: 0.85rem;
+  color: #666;
+  text-align: right;
+}
+
+.bulk-diagnosis-form .char-count.near-limit {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+/* Error Message */
+.bulk-diagnosis-form .error-message {
+  padding: 0.75rem;
+  background-color: #fadbd8;
+  color: #c0392b;
+  border: 1px solid #e74c3c;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* Form Actions */
+.bulk-diagnosis-form .form-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+.bulk-diagnosis-form .submit-btn,
+.bulk-diagnosis-form .cancel-btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bulk-diagnosis-form .submit-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.bulk-diagnosis-form .submit-btn:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+.bulk-diagnosis-form .submit-btn:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.bulk-diagnosis-form .cancel-btn {
+  background-color: #95a5a6;
+  color: white;
+}
+
+.bulk-diagnosis-form .cancel-btn:hover:not(:disabled) {
+  background-color: #7f8c8d;
+}
+
+.bulk-diagnosis-form .cancel-btn:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .bulk-diagnosis-form {
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+
+  .bulk-diagnosis-form .form-header {
+    padding-bottom: 0.75rem;
+  }
+
+  .bulk-diagnosis-form .form-actions,
+  .bulk-diagnosis-form .confirmation-actions {
+    flex-direction: column;
+  }
+
+  .bulk-diagnosis-form .submit-btn,
+  .bulk-diagnosis-form .cancel-btn,
+  .bulk-diagnosis-form .confirm-btn,
+  .bulk-diagnosis-form .cancel-confirmation-btn {
+    width: 100%;
+  }
+}

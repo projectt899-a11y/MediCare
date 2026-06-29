@@ -1,0 +1,213 @@
+.xray-image-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.xray-image-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Header with Selection Checkbox */
+.xray-image-card .card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-bottom: 1px solid #eee;
+  background-color: #f9f9f9;
+}
+
+.xray-image-card .selection-checkbox {
+  margin-top: 0.2rem;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.xray-image-card .image-metadata {
+  flex: 1;
+  min-width: 0;
+}
+
+.xray-image-card .file-name {
+  margin: 0;
+  font-weight: 600;
+  color: #333;
+  word-break: break-word;
+  font-size: 0.85rem;
+}
+
+.xray-image-card .upload-time {
+  margin: 0.15rem 0 0 0;
+  font-size: 0.75rem;
+  color: #666;
+}
+
+/* Image Container */
+.xray-image-card .image-container {
+  width: 100%;
+  height: 180px;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.xray-image-card .xray-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Diagnosis Sections */
+.xray-image-card .diagnosis-section {
+  padding: 0.75rem;
+  border-top: 1px solid #eee;
+}
+
+.xray-image-card .diagnosis-section h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.xray-image-card .ai-diagnosis {
+  background-color: #f0f7ff;
+}
+
+.xray-image-card .doctor-diagnosis {
+  background-color: #f9f9f9;
+}
+
+/* Diagnosis Content */
+.xray-image-card .diagnosis-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.xray-image-card .diagnosis-text {
+  margin: 0;
+  color: #333;
+  line-height: 1.4;
+  font-size: 0.85rem;
+  word-break: break-word;
+}
+
+.xray-image-card .diagnosis-metadata {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.xray-image-card .confidence {
+  font-weight: 500;
+  color: #2980b9;
+}
+
+.xray-image-card .doctor-name {
+  font-weight: 500;
+  color: #27ae60;
+}
+
+.xray-image-card .timestamp {
+  color: #999;
+}
+
+/* Pending Analysis */
+.xray-image-card .pending-analysis {
+  padding: 0.75rem;
+  text-align: center;
+  color: #999;
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+.xray-image-card .pending-analysis p {
+  margin: 0;
+}
+
+/* No Diagnosis */
+.xray-image-card .no-diagnosis {
+  margin: 0;
+  color: #999;
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+/* Buttons */
+.xray-image-card .edit-diagnosis-btn,
+.xray-image-card .add-diagnosis-btn {
+  padding: 0.4rem 0.8rem;
+  margin-top: 0.5rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background-color 0.3s ease;
+}
+
+.xray-image-card .edit-diagnosis-btn:hover,
+.xray-image-card .add-diagnosis-btn:hover {
+  background-color: #2980b9;
+}
+
+.xray-image-card .edit-diagnosis-btn:disabled,
+.xray-image-card .add-diagnosis-btn:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.xray-image-card .add-diagnosis-btn {
+  width: 100%;
+  padding: 0.6rem;
+  margin: 0.75rem;
+  background-color: #27ae60;
+}
+
+.xray-image-card .add-diagnosis-btn:hover {
+  background-color: #229954;
+}
+
+/* Diagnosis Form Container */
+.xray-image-card .diagnosis-form-container {
+  padding: 0.75rem;
+  background-color: #ecf0f1;
+  border-top: 1px solid #bdc3c7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .xray-image-card .card-header {
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+
+  .xray-image-card .image-container {
+    height: 200px;
+  }
+
+  .xray-image-card .diagnosis-section {
+    padding: 0.75rem;
+  }
+
+  .xray-image-card .file-name {
+    font-size: 0.9rem;
+  }
+
+  .xray-image-card .upload-time {
+    font-size: 0.8rem;
+  }
+}
